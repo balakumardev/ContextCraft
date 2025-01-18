@@ -1,0 +1,31 @@
+<idea-plugin>
+    <id>dev.balakumar.copy-related-files</id>
+    <name>ContextCraft- Copy Related Files</name>
+    <version>1.0</version>
+    <vendor email="mail@balakumar.dev" url="https://balakumar.dev">BalaKumar.dev</vendor>
+
+    <description><![CDATA[
+        Copies the content of selected file and related files in the same package to clipboard.
+    ]]></description>
+
+    <change-notes><![CDATA[
+        Initial release of the plugin.
+    ]]></change-notes>
+
+    <!-- Update these version constraints -->
+    <idea-version since-build="231" until-build="243.*"/>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+    <depends>org.jetbrains.kotlin</depends>
+
+    <actions>
+        <action id="CopyRelatedFiles"
+                class="dev.balakumar.CopyRelatedFilesAction"
+                text="Copy File with Related Files"
+                description="Copy selected file and related files to clipboard">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
+        </action>
+    </actions>
+</idea-plugin>
