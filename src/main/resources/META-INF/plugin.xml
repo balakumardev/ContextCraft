@@ -6,10 +6,27 @@
 
     <description><![CDATA[
         Copies the content of selected file and related files in the same package to clipboard.
+
+        Designed to help Java developers share code context with LLMs (Large Language Models) to reduce hallucinations
+        and provide better context for code-related questions.
+
+        Features:
+        - Automatically detects and copies related files based on references
+        - Configurable depth of reference tracking
+        - Smart content pruning to focus on relevant parts
+        - Support for interface implementations
+        - Preserves Javadoc comments
     ]]></description>
 
     <change-notes><![CDATA[
-        Initial release of the plugin.
+        <h3>1.0</h3>
+        <ul>
+            <li>Initial release with basic functionality</li>
+            <li>Support for Java and Kotlin files</li>
+            <li>Configurable reference depth</li>
+            <li>Interface implementation tracking</li>
+            <li>Smart content pruning</li>
+        </ul>
     ]]></change-notes>
 
     <!-- Update these version constraints -->
