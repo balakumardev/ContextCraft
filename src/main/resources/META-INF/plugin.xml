@@ -21,7 +21,7 @@
 
     <actions>
         <action id="CopyRelatedFiles"
-                class="dev.balakumar.CopyRelatedFilesAction"
+                class="dev.balakumar.copyrelatedfiles.CopyRelatedFilesAction"
                 text="Copy File with Related Files"
                 description="Copy selected file and related files to clipboard">
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
