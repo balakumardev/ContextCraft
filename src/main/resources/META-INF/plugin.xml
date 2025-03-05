@@ -43,6 +43,12 @@
                 description="Copy selected file and related files to clipboard">
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
             <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
+            <add-to-group group-id="EditorTabPopupMenu" anchor="first"/>
+            <add-to-group group-id="ConsoleEditorPopupMenu" anchor="first"/>
+            <add-to-group group-id="EditorPopupMenu.GoTo" anchor="first"/>
+            <add-to-group group-id="ProjectViewPopupMenuRefactoringGroup" anchor="first"/>
+            <add-to-group group-id="EditorContextBarMenu" anchor="first"/>
         </action>
     </actions>
+
 </idea-plugin>

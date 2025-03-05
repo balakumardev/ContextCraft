@@ -1071,26 +1071,34 @@ class CopyRelatedFilesAction : AnAction() {
     }
 
     private fun isSourceFile(file: VirtualFile): Boolean {
-        val extension = file.extension?.lowercase() ?: return false
-        return extension in setOf("java", "kt", "scala", "groovy", "class")
+        return true; // Always return true for now
+//        val extension = file.extension?.lowercase() ?: return false
+//        return extension in setOf("java", "kt", "scala", "groovy", "class")
     }
 
     override fun update(e: AnActionEvent) {
-        // This method controls when the action is visible/enabled in the context menu
-        val project = e.project
 
-        // Try to get the file from multiple possible sources
-        val file = getTargetFile(e)
+        // Always enable for debugging
+        e.presentation.isEnabledAndVisible = true
 
-        // Enable the action if we have a project and a valid source file
-        val isEnabled = project != null && file != null && isSourceFile(file)
-
-        e.presentation.isEnabledAndVisible = isEnabled
-
-        // For debugging purposes
-        if (LOG.isDebugEnabled) {
-            LOG.debug("Update called: project=${project != null}, file=${file?.path}, enabled=$isEnabled")
-        }
+        // Log the event for debugging
+        LOG.info("Update called: context=${e.place}, data=${e.dataContext}")
+//
+//        // This method controls when the action is visible/enabled in the context menu
+//        val project = e.project
+//
+//        // Try to get the file from multiple possible sources
+//        val file = getTargetFile(e)
+//
+//        // Enable the action if we have a project and a valid source file
+//        val isEnabled = project != null && file != null && isSourceFile(file)
+//
+//        e.presentation.isEnabledAndVisible = isEnabled
+//
+//        // For debugging purposes
+//        if (LOG.isDebugEnabled) {
+//            LOG.debug("Update called: project=${project != null}, file=${file?.path}, enabled=$isEnabled")
+//        }
     }
 
     // Load settings from persistent storage
